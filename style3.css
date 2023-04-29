@@ -1,0 +1,275 @@
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Lato;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height: 59px
+}
+/* Navigation Bar */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0px;
+}
+.checkbtn{
+    display: none;
+}
+#check{
+    display: none;
+}
+/* logo styling */
+#logo img{
+    height: 55px;
+    margin: 2px 0px 10px 20px;
+}
+/* list styling */
+#navbar ul{
+    display: flex; 
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+#navbar ul li{
+    list-style: none;
+    font-size: 1.2rem;
+}
+.my{
+    display: block;
+    color: aliceblue; 
+    margin: 0px 10px 10px 10px;
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+#navbar ul li a:hover{
+    display: block;
+    color: rgb(0, 0, 0); 
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: 0.5s;
+}
+a.active{
+    display: block;
+    margin-left: 10px;
+    color: rgb(0, 0, 0); 
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+/* Home section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 180px;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+#home::before{
+    content: "";
+    background: url(img/IMG-20230320-WA0016.jpg) no-repeat center center/cover;
+    position: absolute;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.85;
+    animation: bgchange 30s linear infinite;
+}
+@keyframes bgchange{
+    0%{
+        background-image: url(img/IMG-20230320-WA0011.jpg);
+    }
+    20%{
+        background-image: url(img/IMG-20230320-WA0011.jpg);
+    }/*1*/
+    21%{
+        background-image: url(img/IMG-20230320-WA0015.jpg);
+    }
+    40%{
+        background-image: url(img/IMG-20230320-WA0015.jpg);
+    }/*2*/
+    41%{
+        background-image: url(img/IMG-20230320-WA0017.jpg);
+    }
+    60%{
+        background-image: url(img/IMG-20230320-WA0017.jpg);
+    }/*3*/
+    61%{
+        background-image: url(img/IMG-20230320-WA0016.jpg);
+    }
+    80%{
+        background-image: url(img/IMG-20230320-WA0016.jpg);
+    }/*4*/
+    81%{
+        background-image: url(img/IMG-20230320-WA0022.jpg);
+    }
+    100%{
+        background-image: url(img/IMG-20230320-WA0022.jpg);
+    }
+}
+#home-h{
+    position: relative;
+    top: -45px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: merriweather;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+#home p{
+        position: relative;
+        top: -45px;
+        color: white;
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    
+    /* Services Section */  
+#services{
+    margin: 34px;
+    display: flex;
+}
+#ser-h{
+    position: relative;
+    top: -28px;
+}
+.box{
+    background-color:rgb(242, 242, 242);
+    position: relative;
+    top: -45px;
+    border: 2px solid brown;
+    padding: 10px ;
+    margin: 15px;
+    border-radius: 15px;
+}
+.box img{
+    height: 110px;
+    display: block;
+    margin: auto;
+}
+.box p{
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+/* Client Sections */
+#client-sec{
+    height: 344px;
+    position: relative;
+}
+#client-sec::before{
+    content: "";
+    position: absolute;
+    background: url(img/IMG-20230320-WA0018.jpg) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.6;
+}
+#client-h{
+    position: relative;
+    top: 0px;
+}
+#clients{
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+}
+#clients img{
+    height: 150px;
+    margin: 10px
+}
+/* Contact Section */
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url(img/IMG-20230320-WA0020.jpg) no-repeat center center/cover;
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input, textarea{
+    width: 100%;
+    padding: 0.25rem;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    border: 2px solid black;
+}
+#contact-box form{
+    width: 40%;
+}
+#contact-box label{
+    font-family: merriweather;
+    font-size: 1.2rem;
+    margin: 5px 0px 10px 0px;
+}
+
+/* Footer */
+.center{
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 5px 20px;
+}
+
+/* Utility classes */
+.h-pri{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: merriweather;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+.h-sec{
+    font-family: merriweather;
+    font-size: 1.5rem;
+    padding: 12px;
+    text-align: center;
+}
+.btn{
+    position: relative;
+    top: -40px;
+    padding: 5px 10px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 10px;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgb(129, 32, 32);
+}
